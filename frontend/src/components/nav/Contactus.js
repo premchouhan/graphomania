@@ -1,10 +1,47 @@
 //FUNCTIONAL COMPONENT
 //STEP 1 -- IMPORT
-import React from "react";
 import Navbar from '../nav/Navbar'
 import './contact/contactus.css'
+import { useState } from 'react';
+import axios from 'axios';
 //STEP 2 -- CREATE FUNCTIONAL COMPONENT
 function Contactus() {
+
+  const [ename, setEmpName] = useState("");
+    const [eemail, setEmpEmail] = useState("");
+    const [emessage, setEmpMessage] = useState("");
+
+
+    
+    const handleSubmit = (evt) => {
+      evt.preventDefault();
+      console.log(`Form submitted:`);
+      console.log(`NAME: ${ename}`);
+      console.log(`EMAIL: ${eemail}`);
+
+      //CREATE JSON AND STORE ALL USER INPUT
+      const userobj = {
+          username: ename,
+          useremail: eemail,
+          usermessage: emessage,
+          
+      }
+
+      //COMMUNICATE WITH BACKEND USING REST API
+      axios.post('http://localhost:5000/user/contactus', userobj)
+          .then(res => {
+              console.log(res.data)
+              setEmpMessage('SUCCESSFULLY SUBMITTED')
+
+              //TO CLEAR DATA
+              setEmpName('')
+              setEmpEmail('')
+              setEmpMessage('')
+             
+          });
+  }
+
+
     return (
         <div>
              <Navbar/>        
@@ -34,20 +71,23 @@ function Contactus() {
       </div>
       <div class="right-side">
         <div class="topic-text">Send us a message</div>
-        <p>If you have any work from me or any types of quries related to my tutorial,
+        <p>If you have any work from me or any types of quries related to blog,
              you can send me message from here. It's my pleasure to help you.</p>
-      <form action="#">
+      <form onSubmit={handleSubmit}>
         <div class="input-box">
-          <input type="text" placeholder="Enter your name"/>
+          <input type="text" value={ename}
+                    onChange={(e) => setEmpName(e.target.value)} placeholder="Enter your name"/>
         </div>
         <div class="input-box">
-          <input type="text" placeholder="Enter your email"/>
+          <input type="email" value={eemail}
+                    onChange={(e) => setEmpEmail(e.target.value)} placeholder="Enter your email"/>
         </div>
         <div class="input-box message-box">
-          <input type="text" placeholder="Enter your message"/>
+          <input type="text" value={emessage}
+                    onChange={(e) => setEmpMessage(e.target.value)} placeholder="Enter your message"/>
         </div>
         <div class="button">
-          <input type="button" value="Send Now" />
+          <input type="submit" value="Send Now" />
         </div>
       </form>
     </div>
