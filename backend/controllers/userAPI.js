@@ -1,11 +1,38 @@
 // IMPORT EXPRESS SERVER
 const express = require('express');
 
-//IMPORT EMPLOYEE MODEL AND BIND IT
+//IMPORT EMPLOYEE MODEL AND BIND IT 
 const EmpModel = require('../models/empinfo');
+//IMPORT Feedback MODEL AND BIND IT
+const feedbackDetails = require('../models/reportinfo');
 
 // USE Router FOR EXPRESS SERVER
 const router = express.Router();
+
+// INSERT feedbackRECORD
+router.post('/contactus', (req, res) => {
+    //Create Object of feedback Model Class
+    // And Receive value from request body and Store value within the Object
+    const userobj = new feedbackDetails({
+        username: req.body.username,
+        useremail: req.body.useremail,
+        usermessage: req.body.usermessage,
+    });//CLOSE EmpDetails
+
+    //INSERT/SAVE THE RECORD/DOCUMENT
+    userobj.save()
+        .then(inserteddocument => {
+            res.send('DOCUMENT INSERED IN MONGODB DATABASE' + '<br\>' + inserteddocument);
+
+        })//CLOSE THEN
+        .catch(err => {
+            res.send('Error in DB connection : ' + JSON.stringify(err, undefined, 2));
+            process.exit();
+        });
+
+    res.send('<h3>INSIDE POST METHOD..THIS IS INSERT API..</h3>');
+});
+
 
 // INSERT RECORD/Document
 router.post('/userreg', (req, res) => {
@@ -32,7 +59,6 @@ router.post('/userreg', (req, res) => {
             res.send('Error in DB connection : ' + JSON.stringify(err, undefined, 2));
             process.exit();
         });
-
     res.send('<h3>INSIDE POST METHOD..THIS IS INSERT API..</h3>');
 });
 
@@ -54,12 +80,6 @@ router.post('/userlogin', (req, res) => {
         })//CLOSE CATCH
 }//CLOSE CALLBACK FUNCTION BODY
 )//CLOSE POST METHOD 
-
-
-
-
-
-
 
 // UPDATE RECORD/Document
 router.put('/update', (req, res) => {
