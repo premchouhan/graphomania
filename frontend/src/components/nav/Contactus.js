@@ -2,14 +2,60 @@
 //STEP 1 -- IMPORT
 import React from "react";
 import Navbar from '../nav/Navbar'
+import './contact/contactus.css'
 //STEP 2 -- CREATE FUNCTIONAL COMPONENT
 function Contactus() {
     return (
         <div>
-             <Navbar/>
-            <h1>Contact us @ +91 9064733701</h1>
-          zzz  {/* <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14611.540922180628!2d86.9508932!3d23.7157922!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc2814fdb4c367784!2sAsansol%20Engineering%20College%20(AEC)!5e0!3m2!1sen!2sin!4v1676523477016!5m2!1sen!2sin" */}
-             {/* width="1600" height="400" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe> */}
+             <Navbar/>        
+<div className="size">
+
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+            <div class="text-one">Asansol, </div>
+          <div class="text-two">PX82+66Q, Vivekananda Sarani, Opp. Jubilee Petrol Pump, Kanyapur, West Bengal 713305</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+91 9064733701</div>
+          <div class="text-two">+91 6203865693</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">chouhanprem7136@gmail.com</div>
+          <div class="text-two">trina@gmail.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>If you have any work from me or any types of quries related to my tutorial,
+             you can send me message from here. It's my pleasure to help you.</p>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Enter your name"/>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email"/>
+        </div>
+        <div class="input-box message-box">
+          <input type="text" placeholder="Enter your message"/>
+        </div>
+        <div class="button">
+          <input type="button" value="Send Now" />
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+
+</div>
+
         </div>
     )
 }
