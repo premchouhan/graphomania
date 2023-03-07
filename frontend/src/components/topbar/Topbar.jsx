@@ -14,18 +14,18 @@ export default function Topbar() {
       <div className="topCenter">
         <ul className="topList">
           <li className="topListItem">
-            <Link style={{paddingLeft: 13, textDecoration: 'none'}} className="link" to="/">
+            <Link style={{ textDecoration: 'none' }} className="link" to="/">
               HOME
             </Link>
           </li>
           {/* <li className="topListItem">ABOUT</li> */}
           <li className="topListItem">
-          <Link style={{paddingLeft: 13, textDecoration: 'none'}}  className="link" to="/contactus">
-          CONTACT
-              </Link></li>
+            <Link style={{ textDecoration: 'none' }} className="link" to="/contactus">
+              CONTACT
+            </Link></li>
 
           <li className="topListItem">
-            <Link style={{paddingLeft: 13, textDecoration: 'none'}} className="link" to="/userreg">
+            <Link style={{ textDecoration: 'none' }} className="link" to="/userreg">
               BLOG
             </Link>
           </li>
@@ -44,12 +44,12 @@ export default function Topbar() {
         ) : (
           <ul className="topList">
             <li className="topListItem">
-              <Link style={{paddingLeft: 13, textDecoration: 'none'}} className="link" to="/userlogin">
+              <Link style={{ textDecoration: 'none' }} className="link" to="/userlogin">
                 LOGIN
               </Link>
             </li>
             <li className="topListItem">
-              <Link style={{paddingLeft: 13, textDecoration: 'none'}} className="link" to="/userreg">
+              <Link style={{ textDecoration: 'none' }} className="link" to="/userreg">
                 REGISTER
               </Link>
             </li>
