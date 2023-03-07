@@ -3,7 +3,7 @@ import Header from "../../components/header/Header";
 import Posts from "../../components/posts/Posts";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./homepage.css";
-import Carousel from "../../components/carousel/Carousel";
+import Carousel from "../../components/carousel/carousel";
 
 export default function Homepage() {
   const location = useLocation();
