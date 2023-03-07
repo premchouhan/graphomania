@@ -1,5 +1,4 @@
 
-
 .headerTitles {
   display: flex;
   flex-direction: column;
@@ -9,10 +8,12 @@
 }
 
 .headerTitleSm {
+  
   font-size: 20px;
 }
 
 .headerTitleLg {
+  
   font-size: 80px;
 }
 
