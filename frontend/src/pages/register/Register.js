@@ -86,12 +86,12 @@ function Reg() {
                 <input type="radio" name="gender" value="MALE"
                     checked={egender === 'MALE'}
                     onChange={(e) => setEmpGender(e.target.value)} />
-                <label>Male</label>
+                <label>Male </label>
 
                 <input type="radio" name="gender" value="FEMALE"
                     checked={egender === 'FEMALE'}
                     onChange={(e) => setEmpGender(e.target.value)} />
-                <label>Female</label>
+                <label> Female</label>
                 <br /><br />
 
                 <select className="registerInput" value={ecountry} onChange={(e) => setEmpCountry(e.target.value)}>
