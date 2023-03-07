@@ -1,6 +1,5 @@
 import "./header.css";
 // import Navbar from "../../components/nav/Navbar";
-import Navbar from "../../components/topbar/Topbar";
 import Topbar from "../../components/topbar/Topbar";
 export default function Header() {
   return (

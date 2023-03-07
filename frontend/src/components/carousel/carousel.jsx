@@ -4,7 +4,7 @@ function UncontrolledExample() {
   return (
     <Carousel>
       <Carousel.Item>
-        <img
+        <img height="400"
           className="d-block w-100"
           src="https://www.jssor.com/premium/ski/img/dreamstime_m_103202288-duotone.jpg"
           alt="First slide"
@@ -15,7 +15,7 @@ function UncontrolledExample() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+        <img height="400"
           className="d-block w-100"
           src="https://jssors8.azureedge.net/demos/image-slider/img/px-bloom-blossom-flora-65219-image.jpg"
           alt="Second slide"
@@ -26,7 +26,7 @@ function UncontrolledExample() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+        <img height="400"
           className="d-block w-100"
           src="https://jssors8.azureedge.net/demos/image-slider/img/px-action-athlete-athletes-848618-image.jpg"
           alt="Third slide"
