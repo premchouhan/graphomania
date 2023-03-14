@@ -25,6 +25,9 @@ app.use('/admin', adminwork);
 const userwork = require('./controllers/userAPI.js');
 app.use('/user', userwork);
 
+const blogwork = require('./controllers/blogAPI.js');
+app.use('/blog', blogwork);
+
 const dbwork = require('./dbconnect')
 
 // ACCEPT REQUEST FROM CLIENT AT PORT NO 5000

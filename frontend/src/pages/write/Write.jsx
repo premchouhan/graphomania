@@ -19,7 +19,7 @@ export default function Write() {
       email: email,
       name: name
     }
-    axios.post('http://localhost:5000/user/write', blogobj)
+    axios.post('http://localhost:5000/blog/write', blogobj)
     .then(res => {
       console.log(res.data)
 //set every variable to zero
