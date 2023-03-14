@@ -13,4 +13,4 @@ const blogDetails = schema_mongoose.Schema(
     }
 );
 
-module.exports = schema_mongoose.model('blog', blogDetails);
+module.exports = schema_mongoose.model('blogs', blogDetails);
