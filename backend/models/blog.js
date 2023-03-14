@@ -1,6 +1,6 @@
 const schema_mongoose = require('mongoose');
 
-const feedbackDetails = schema_mongoose.Schema(
+const blogDetails = schema_mongoose.Schema(
     {
         name: { type: String },
         title: { type: String },
@@ -13,4 +13,4 @@ const feedbackDetails = schema_mongoose.Schema(
     }
 );
 
-module.exports = schema_mongoose.model('blog', feedbackDetails);
+module.exports = schema_mongoose.model('blog', blogDetails);
