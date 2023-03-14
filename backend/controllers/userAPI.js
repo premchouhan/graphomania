@@ -6,7 +6,7 @@ const EmpModel = require('../models/empinfo');
 //IMPORT Feedback MODEL AND BIND IT
 const feedbackDetails = require('../models/reportinfo');
 
-const blogmodel = require('../models/blog');
+
 
 // USE Router FOR EXPRESS SERVER
 const router = express.Router();

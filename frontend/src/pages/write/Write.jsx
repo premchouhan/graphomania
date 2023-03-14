@@ -19,7 +19,7 @@ export default function Write() {
       email: email,
       name: name
     }
-    axios.post('http://localhost:5000/blog/write', blogobj)
+    axios.post('http://localhost:5000/blogs/write', blogobj)
     .then(res => {
       console.log(res.data)
 //set every variable to zero
@@ -85,7 +85,11 @@ export default function Write() {
               <input type='text' value={name} onChange={(e) => setName(e.target.value)}/>
             </th>
           </tr>
-          <tr><th colSpan='2'><input  className="submit" type='submit'/></th></tr>
+          <tr>
+          <th>
+              Submit
+            </th>
+            <th colSpan='2' className="buttonContainer"><input  className="submit" type='submit'/></th></tr>
         </table>
       </form>
     </div>

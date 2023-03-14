@@ -26,7 +26,7 @@ const userwork = require('./controllers/userAPI.js');
 app.use('/user', userwork);
 
 const blogwork = require('./controllers/blogAPI.js');
-app.use('/blog', blogwork);
+app.use('/blogs', blogwork);
 
 const dbwork = require('./dbconnect')
 
