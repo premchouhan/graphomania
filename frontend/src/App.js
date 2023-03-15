@@ -1,5 +1,5 @@
 import './App.css';
-import Contactus from './components/nav/Contactus';
+import Contactus from './components/nav/contact/Contactus';
 import Adminlogin from './components/admincomponent/Adminlogin';
 import Adminafterlogin from './components/admincomponent/Adminafterlogin';
 import Adminviewall from './components/admincomponent/Adminviewall';

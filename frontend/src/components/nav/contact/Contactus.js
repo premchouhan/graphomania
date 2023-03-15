@@ -1,7 +1,7 @@
 //FUNCTIONAL COMPONENT
 //STEP 1 -- IMPORT
-import Navbar from '../nav/Navbar'
-import './contact/contactus.css'
+import Navbar from '../Navbar'
+import './contactus.css'
 import { useState } from 'react';
 import axios from 'axios';
 //STEP 2 -- CREATE FUNCTIONAL COMPONENT
