@@ -6,7 +6,7 @@ function sendmail(receiveremailid, subjectline, emailbody) {
         let transporter = nodemailer.createTransport({
             host: 'smtp.googlemail.com', // Gmail Host
             port: 465, // Port
-            secure: true, // this is true as porgit is 465
+            secure: true, // this is true as port is 465
             auth: {
                 user: 'graphomania7136', //Gmail username
                 pass: 'xispraayokrhwycs' // Gmail App password

@@ -14,11 +14,12 @@ function Navbar() {
         return (
             <>
                 <nav>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/adminafterlogin">ADMIN HOME |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/adminsearchuser">SEARCH USER |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="/adminviewall">VIEW ALL |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="#">DEL |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="/adminlogout">LOGOUT</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminafterlogin">ADMIN HOME |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminsearchuser">SEARCH USER |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminviewall">VIEW ALL |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/admindeleteuser">DELETE  |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminmanageuser">MANAGE USER |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminlogout">LOGOUT</Link>
                 </nav>
                 <hr />
             </>
@@ -28,10 +29,10 @@ function Navbar() {
         return (
             <>
                 <nav>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="#">USER HOME |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="#">PROFILE UPDATE |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/write">WRITE |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="/userlogout">LOGOUT</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/userafterlogin">USER HOME |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/profileupdate">PROFILE UPDATE |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/write">WRITE |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/userlogout">LOGOUT</Link>
                 </nav>
                 <hr />
                 <h3 style={{ color: 'green' }}>WELCOME {username}</h3>
@@ -42,11 +43,11 @@ function Navbar() {
         return (
             <>
                 <nav>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/">HOME |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/userreg">REG |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/userlogin">LOGIN |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/contactus">CONTACT US |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/adminlogin">ADMIN LOGIN</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/">HOME |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/userreg">REG |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/userlogin">LOGIN |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/contactus">CONTACT US |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminlogin">ADMIN LOGIN</Link>
                 </nav>
                 <hr />
             </>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from '../nav/Navbar'
-import "./alogin.css"
+import "./adminlogin.css"
 //STEP 1 for binding data
 import { useState } from 'react';
 

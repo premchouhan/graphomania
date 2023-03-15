@@ -6,7 +6,7 @@ const EmpModel = require('../models/empinfo');
 //IMPORT Feedback MODEL AND BIND IT
 const feedbackDetails = require('../models/reportinfo');
 
-
+const mailservice = require('../services/mailService.js');
 
 // USE Router FOR EXPRESS SERVER
 const router = express.Router();
@@ -24,19 +24,14 @@ router.post('/contactus', (req, res) => {
     //INSERT/SAVE THE RECORD/DOCUMENT
     userobj.save()
         .then(inserteddocument => {
-            res.send('DOCUMENT INSERED IN MONGODB DATABASE' + '<br\>' + inserteddocument);
-
+            mailservice.sendmail(req.body.empemail, 'REGISTRATION SUCCESSFUL', 'THANK YOU FOR REGISTRATION');
+            res.send(inserteddocument)
         })//CLOSE THEN
         .catch(err => {
-            res.send('Error in DB connection : ' + JSON.stringify(err, undefined, 2));
+            res.send(JSON.stringify(err, undefined, 2));
             process.exit();
         });
-
-    res.send('<h3>INSIDE POST METHOD..THIS IS INSERT API..</h3>');
 });
-
-
-
 
 
 
@@ -55,16 +50,21 @@ router.post('/userreg', (req, res) => {
         empaddress: req.body.empaddress,
     });//CLOSE EmpModel
 
+        str1 = 'Wellcome to Graphomania ' + req.body.empname + '\n Your userid & password is given below.' +
+        '\n userId -' + req.body.empemail + '\n pass - ' + req.body.emppass
+
     //INSERT/SAVE THE RECORD/DOCUMENT
     empobj.save()
         .then(inserteddocument => {
-            res.send('DOCUMENT INSERED IN MONGODB DATABASE' + '<br\>' + inserteddocument);
+            mailservice.sendmail(req.body.empemail, 'WELCOME TO GRAPHOMANIA', str1);
 
+            res.send('DOCUMENT INSERED IN MONGODB DATABASE' + '<br/>' + inserteddocument);
         })//CLOSE THEN
         .catch(err => {
             res.send('Error in DB connection : ' + JSON.stringify(err, undefined, 2));
             process.exit();
         });
+
     res.send('<h3>INSIDE POST METHOD..THIS IS INSERT API..</h3>');
 });
 
@@ -88,10 +88,33 @@ router.post('/userlogin', (req, res) => {
 )//CLOSE POST METHOD 
 
 // UPDATE RECORD/Document
-router.put('/update', (req, res) => {
-    res.send('<h2>INSIDE PUT METHOD..THIS IS UPDATE API..</h2>');
-});
+// router.put('/update', (req, res) => {
+//     res.send('<h2>INSIDE PUT METHOD..THIS IS UPDATE API..</h2>');
+// });
 
+
+
+//UPDATE DOCUMENT IN MONGODB USING EMAILID
+router.put('/profileupdate', (req, res) => {
+    EmpModel.findOneAndUpdate({ "empemail": req.body.empemail },
+        {
+            $set: {
+                "empmobile": req.body.empmobile,
+                "emppass": req.body.emppass,
+                "empaddress": req.body.empaddress
+            }
+        }, { new: true })
+        .then(getupdateddocument => {
+            if (getupdateddocument != null)
+                res.status(200).send(getupdateddocument);
+            else
+                res.status(404).send('INVALID EMAILID ' + req.body.empemail);
+        }) // CLOSE THEN
+        .catch(err => {
+            return res.status(500).send({ message: "DB Problem..Error in UPDATE with id " + req.params.empid });
+        }) // CLOSE CATCH
+} //CLOSE CALLBACK FUNCTION
+); //CLOSE PUT METHOD
 
 //SHOULD BE EXPORTED
 module.exports = router;
