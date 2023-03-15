@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./write.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Write() {
   const [email, setEmail] = useState('');
@@ -33,6 +34,16 @@ export default function Write() {
   }
 
   return (
+        <>
+          <nav>
+                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/adminafterlogin">ADMIN HOME |</Link>
+                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/adminsearchuser">SEARCH USER |</Link>
+                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="/adminviewall">VIEW ALL |</Link>
+                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="#">DEL |</Link>
+                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="/adminlogout">LOGOUT</Link>
+          </nav>
+        
+
     <div className="write">
       <img
         className="writeImg"
@@ -44,7 +55,7 @@ export default function Write() {
           <tr>
             <th>Catagory</th>
             <th>
-              <select>
+              <select onChange={(e) => setCat(e.target.value)}>
                 <option value='travel'>Travel</option>
                 <option value='food'>Food</option>
                 <option value='cinema'>Cinema</option>
@@ -93,5 +104,6 @@ export default function Write() {
         </table>
       </form>
     </div>
+    </>
   );
 }
