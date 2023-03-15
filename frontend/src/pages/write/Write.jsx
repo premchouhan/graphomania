@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./write.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import Navbar from '../../components/nav/Navbar'
 
 export default function Write() {
   const [email, setEmail] = useState('');
@@ -9,6 +9,7 @@ export default function Write() {
   const [name, setName] = useState('');
   const [blog, setBlog] = useState('');
   const [title, setTitle] = useState('');
+
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -20,6 +21,7 @@ export default function Write() {
       email: email,
       name: name
     }
+
     axios.post('http://localhost:5000/blogs/write', blogobj)
     .then(res => {
       console.log(res.data)
@@ -35,13 +37,7 @@ export default function Write() {
 
   return (
         <>
-          <nav>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/adminafterlogin">ADMIN HOME |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}} to="/adminsearchuser">SEARCH USER |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="/adminviewall">VIEW ALL |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="#">DEL |</Link>
-                    <Link style={{paddingLeft: 13, textDecoration: 'none'}}to="/adminlogout">LOGOUT</Link>
-          </nav>
+         <Navbar />
         
 
     <div className="write">

@@ -22,15 +22,15 @@ function Adminviewall() {
     function viewEmpList() {
         return emplist.map((currentrow, index) => {
             return (
-                <div key={index}>
-                    <div>{currentrow.empname}</div>
-                    <div>{currentrow.empemail}</div>
-                    <div>{currentrow.empmobile}</div>
-                    <div>{currentrow.empdob}</div>
-                    <div>{currentrow.empgender}</div>
-                    <div>{currentrow.empcountry}</div>
-                    <div>{currentrow.empaddress}</div>
-                </div>
+                <tr key={index}>
+                    <tr>{currentrow.empname}</tr>
+                    <tr>{currentrow.empemail}</tr>
+                    <tr>{currentrow.empmobile}</tr>
+                    <tr>{currentrow.empdob}</tr>
+                    <tr>{currentrow.empgender}</tr>
+                    <tr>{currentrow.empcountry}</tr>
+                    <tr>{currentrow.empaddress}</tr>
+                </tr>
             );
         });
     }
