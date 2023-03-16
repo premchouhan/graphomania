@@ -95,8 +95,9 @@ function Reg() {
                 <br /><br />
 
                 <select className="registerInput" value={ecountry} onChange={(e) => setEmpCountry(e.target.value)}>
-                    <option value="AF">Afghanistan</option>
+                    
                     <option value="India">India</option>
+                    <option value="Am">America</option>
                     <option value="UK">UK</option>
                     <option value="USA">USA</option>
                 </select>
