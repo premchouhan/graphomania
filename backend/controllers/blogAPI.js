@@ -1,7 +1,6 @@
 const express = require('express');
 
 
-
 const blogmodel = require('../models/blog');
 
 // USE Router FOR EXPRESS SERVER
@@ -9,28 +8,41 @@ const router = express.Router();
 
 
 router.post('/write', (req, res) => {
-    //Create Object of feedback Model Class
+    //Create Object of blog Model Class
     // And Receive value from request body and Store value within the Object
     const blogobj = new blogmodel({
-        cat: req.body.cat,
+        category: req.body.category,
         title: req.body.title,
+        name: req.body.name,
         blog: req.body.blog,
         email: req.body.email,
-        name: req.body.name
-    });//CLOSE EmpDetails
+        
+    });//CLOSE blogDetails
 
     //INSERT/SAVE THE RECORD/DOCUMENT
     blogobj.save()
         .then(inserteddocument => {
             res.send('DOCUMENT INSERED IN MONGODB DATABASE' + '<br\>' + inserteddocument);
-
+            
         })//CLOSE THEN
         .catch(err => {
             res.send('Error in DB connection : ' + JSON.stringify(err, undefined, 2));
             process.exit();
         });
-
-    res.send('<h3>INSIDE POST METHOD..THIS IS INSERT API..</h3>');
 });
+
+
+router.get('/viewpost', (req, res) => {
+    blogmodel.find({})
+        .then(getsearchdocument => {
+            console.log(getsearchdocument)
+            res.send(getsearchdocument)
+        } //CLOSE THEN FUNCTION BODY
+        ) // CLOSE THEN
+        .catch(err => {
+            return res.send({ message: "DB Problem..Error in Retriving with id " + req.params.empid });
+        })//CLOSE CATCH
+}//CLOSE CALLBACK FUNCTION BODY
+);//CLOSE GET METHOD
 
 module.exports = router;

@@ -32,6 +32,7 @@ function Navbar() {
                     <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/userafterlogin">USER HOME |</Link>
                     <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/profileupdate">PROFILE UPDATE |</Link>
                     <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/write">WRITE |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/viewpost">POST |</Link>
                     <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/userlogout">LOGOUT</Link>
                 </nav>
                 <hr />

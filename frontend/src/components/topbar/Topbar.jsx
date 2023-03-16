@@ -25,7 +25,7 @@ export default function Topbar() {
             </Link></li>
 
           <li className="topListItem">
-            <Link style={{ textDecoration: 'none' }} className="link" to="/adminviewall">
+            <Link style={{ textDecoration: 'none' }} className="link" to="/viewpost">
               BLOG
             </Link>
           </li>

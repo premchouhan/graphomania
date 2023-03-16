@@ -48,6 +48,7 @@ router.post('/userreg', (req, res) => {
         empgender: req.body.empgender,
         empcountry: req.body.empcountry,
         empaddress: req.body.empaddress,
+        
     });//CLOSE EmpModel
 
         str1 = 'Wellcome to Graphomania ' + req.body.empname + '\n Your userid & password is given below.' +
@@ -115,6 +116,21 @@ router.put('/profileupdate', (req, res) => {
         }) // CLOSE CATCH
 } //CLOSE CALLBACK FUNCTION
 ); //CLOSE PUT METHOD
+
+
+// router.get('/viewpost', (req, res) => {
+//     EmpModel.find({})
+//         .then(getsearchdocument => {
+//             console.log(getsearchdocument)
+//             res.send(getsearchdocument)
+//         } //CLOSE THEN FUNCTION BODY
+//         ) // CLOSE THEN
+//         .catch(err => {
+//             return res.send({ message: "DB Problem..Error in Retriving with id " + req.params.empid });
+//         })//CLOSE CATCH
+// }//CLOSE CALLBACK FUNCTION BODY
+// );//CLOSE GET METHOD
+
 
 //SHOULD BE EXPORTED
 module.exports = router;

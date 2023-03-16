@@ -33,7 +33,7 @@ function Login() {
                 sessionStorage.setItem("utype", "USER")
                 //localStorage.setItem("utype", "USER")
                 sessionStorage.setItem("username", response1.data[0].empname)
-
+                sessionStorage.setItem("userdetails", JSON.stringify(response1.data[0]))
                 navigate("/userafterlogin");
             })
             .catch(err => {
@@ -44,6 +44,7 @@ function Login() {
         setUserEmail('')
         setUserPass('')
     }
+
 
     return (
         <div className="login">

@@ -4,8 +4,11 @@ import Adminlogin from './components/admincomponent/Adminlogin';
 import Adminafterlogin from './components/admincomponent/Adminafterlogin';
 import Adminviewall from './components/admincomponent/Adminviewall';
 import Adminsearchuser from './components/admincomponent/Adminsearchuser';
+import AdminDeleteUser from './components/admincomponent/AdminDeleteUser';
+import AdminManageUser from './components/admincomponent/AdminManageUser';
 import Adminlogout from './components/admincomponent/Adminlogout';
 import Userafterlogin from './components/usercomponent/Userafterlogin';
+import UserProfileUpdate from './components/usercomponent/UserProfileUpdate'
 import Logout from './components/nav/Logout';
 import Topbar from './components/topbar/Topbar';
 
@@ -15,6 +18,7 @@ import Register from "./pages/register/Register";
 import Settings from "./pages/settings/Settings";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
+import Viewpost from "./components/Viewall"
 // import Navbar from './components/nav/Navbar';
 
 
@@ -33,15 +37,18 @@ function App() {
           <Route path='/single' element={<Single />} />
           <Route path='/write' element={<Write />} />
           <Route path='/Topbar' element={<Topbar />} />
-  
           <Route path='/contactus' element={<Contactus />} />
           <Route path='/adminlogin' element={<Adminlogin />} />
           <Route path='/adminafterlogin' element={<Adminafterlogin />} />
           <Route path='/adminviewall' element={<Adminviewall />} />
           <Route path='/adminsearchuser' element={<Adminsearchuser />} />
+          <Route path='/admindeleteuser' element={<AdminDeleteUser />} />
+          <Route path='/adminmanageuser' element={<AdminManageUser />} />
           <Route path='/adminlogout' element={<Adminlogout />} />
           <Route path='/userafterlogin' element={<Userafterlogin />} />
+          <Route path='/profileupdate' element={<UserProfileUpdate />} />
           <Route path='/userlogout' element={<Logout />} />
+          <Route path='/viewpost' element={<Viewpost />} />
 
         </Routes>
       </BrowserRouter>

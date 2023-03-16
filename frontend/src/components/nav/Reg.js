@@ -94,10 +94,10 @@ function Reg() {
                 <br /><br />
 
                 <select value={ecountry} onChange={(e) => setEmpCountry(e.target.value)}>
-                    <option value="AF">Afghanistan</option>
                     <option value="India">India</option>
                     <option value="UK">UK</option>
                     <option value="USA">USA</option>
+                    <option value="AF">Afghanistan</option>
                 </select>
                 <br /><br />
 
