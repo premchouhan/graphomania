@@ -22,16 +22,19 @@ function Viewall() {
     function viewBlogview() {
         return bloglist.map((currentrow, index) => {
             return (
-
+                <div align="center" >
+                <table border="6" >
                 <tr key={index}>
-                    <td>{currentrow.category}</td>
-                    <td>{currentrow.title}</td>
-                    <td>{currentrow.name}</td>
-                    <td>{currentrow.blog}</td>
-                    <td>{currentrow.email}</td>
+                  <div> CATEGORY   - {currentrow.category}</div>
+                  <div>TITLE   - {currentrow.title}</div>
+                  <div> NAME   - {currentrow.name}</div>
+                  <div>BLOG    - {currentrow.blog}</div>
+                  <div> EMAIL - {currentrow.email}</div>
+                  <div> CreatedAt - {currentrow.createdAt}</div>
 
                 </tr>
-
+                </table>
+                </div>
             );
         });
     }
@@ -40,24 +43,14 @@ function Viewall() {
         <div align="center">
             <Navbar />
 
-            <h3>ALL POST</h3>
-
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th> Category   |</th>
-                        <th>Title   |</th>
-                        <th> Name   |</th>
-                        <th>Blog    |</th>
-                        <th> Email</th>
-                    </tr>
-                </thead>
+            <h3>PUBLIC POST</h3>
 
                 <tbody>
                     {viewBlogview()}
                 </tbody>
-            </table>
-        </div>)
+           
+        </div>
+        )
 }
 
 //STEP 3 -- EXPORT IT TO USE IT

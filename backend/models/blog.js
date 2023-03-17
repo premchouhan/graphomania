@@ -2,7 +2,7 @@ const schema_mongoose = require('mongoose');
 
 const blogmodel = schema_mongoose.Schema(
     {
-        category: { type: String },
+        category : { type: String },
         title: { type: String },
         name: { type: String },
         blog: { type: String },

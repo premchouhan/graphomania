@@ -6,7 +6,7 @@ import Navbar from '../../components/nav/Navbar'
 
 export default function Write() {
   let usertp = sessionStorage.getItem('Usertype')
-  const [ecat, setCategory] = useState('');
+  const [ecategory, setCategory] = useState('');
   const [eemail, setEmail] = useState('');
   const [ename, setName] = useState('');
   const [eblog, setBlog] = useState('');
@@ -27,7 +27,7 @@ export default function Write() {
     evt.preventDefault();
 
     const blogobj = {
-      cat: ecat,
+      Category: ecategory,
       title: etitle,
       name: ename,
       blog: eblog,

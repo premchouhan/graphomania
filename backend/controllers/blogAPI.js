@@ -16,14 +16,14 @@ router.post('/write', (req, res) => {
         name: req.body.name,
         blog: req.body.blog,
         email: req.body.email,
-        
+
     });//CLOSE blogDetails
 
     //INSERT/SAVE THE RECORD/DOCUMENT
     blogobj.save()
         .then(inserteddocument => {
             res.send('DOCUMENT INSERED IN MONGODB DATABASE' + '<br\>' + inserteddocument);
-            
+
         })//CLOSE THEN
         .catch(err => {
             res.send('Error in DB connection : ' + JSON.stringify(err, undefined, 2));
