@@ -6,11 +6,14 @@ import Adminviewall from './components/admincomponent/Adminviewall';
 import Adminsearchuser from './components/admincomponent/Adminsearchuser';
 import AdminDeleteUser from './components/admincomponent/AdminDeleteUser';
 import AdminManageUser from './components/admincomponent/AdminManageUser';
+import AdminManagePost from './components/admincomponent/AdminManagePost';
 import Adminlogout from './components/admincomponent/Adminlogout';
 import Userafterlogin from './components/usercomponent/Userafterlogin';
 import UserProfileUpdate from './components/usercomponent/UserProfileUpdate'
 import Logout from './components/nav/Logout';
 import Topbar from './components/topbar/Topbar';
+
+
 
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/login/Login";
@@ -42,7 +45,8 @@ function App() {
           <Route path='/adminafterlogin' element={<Adminafterlogin />} />
           <Route path='/adminviewall' element={<Adminviewall />} />
           <Route path='/adminsearchuser' element={<Adminsearchuser />} />
-          <Route path='/admindeleteuser' element={<AdminDeleteUser />} />
+           <Route path='/admindeleteuser' element={<AdminDeleteUser />} />
+           <Route path='/adminmanagepost' element={<AdminManagePost />} />
           <Route path='/adminmanageuser' element={<AdminManageUser />} />
           <Route path='/adminlogout' element={<Adminlogout />} />
           <Route path='/userafterlogin' element={<Userafterlogin />} />

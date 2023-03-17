@@ -19,6 +19,7 @@ function Navbar() {
                     <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminviewall">VIEW ALL |</Link>
                     <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/admindeleteuser">DELETE  |</Link>
                     <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminmanageuser">MANAGE USER |</Link>
+                    <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminmanagepost">MANAGE POST |</Link>
                     <Link style={{ paddingLeft: 13, textDecoration: 'none' }} to="/adminlogout">LOGOUT</Link>
                 </nav>
                 <hr />

@@ -1,26 +1,15 @@
-// import { useState } from "react";
-import React, { useState, useEffect } from 'react'
+
+import React, { useState } from 'react'
 import "./write.css";
 import axios from "axios";
 import Navbar from '../../components/nav/Navbar'
 
 export default function Write() {
-  let usertp = sessionStorage.getItem('Usertype')
   const [ecategory, setCategory] = useState('');
   const [eemail, setEmail] = useState('');
   const [ename, setName] = useState('');
   const [eblog, setBlog] = useState('');
   const [etitle, setTitle] = useState('');
-  const [msg, setMsg] = useState("");
-
-  // useEffect(() => {
-  //   let userinfo = JSON.parse(sessionStorage.getItem('write'))
-  //       setCategory(userinfo.cat)
-  //        setTitle(userinfo.title)
-  //       setName(userinfo.name)
-  //       setBlog(userinfo.blog)
-  //       setEmail(userinfo.email)
-  // }, [])
 
 
   const handleSubmit = (evt) => {
@@ -39,8 +28,7 @@ export default function Write() {
       .then(res => {
         console.log(res.data)
         sessionStorage.setItem("write", JSON.stringify(res.data))
-        setMsg('SUCCESSFULLY POSTED')
-        //set every variable to zero
+        
       })
       .catch(err => console.log(err))
     setCategory('');
@@ -74,7 +62,7 @@ export default function Write() {
 
               <th>
                 <select value={ecategory} onChange={(e) => setCategory(e.target.value)}>
-                  <option >select</option>
+                <option >select</option>
                   <option value='travel'>Travel</option>
                   <option value='food'>Food</option>
                   <option value='cinema'>Cinema</option>

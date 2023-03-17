@@ -45,4 +45,22 @@ router.get('/viewpost', (req, res) => {
 }//CLOSE CALLBACK FUNCTION BODY
 );//CLOSE GET METHOD
 
+// DELETE RECORD/Document
+router.delete('/delpost/:eid', (req, res) => {
+    blogmodel.findOneAndRemove({ "email": req.params.eid })
+        .then(deleteddocument => {
+            if (deleteddocument != null) {
+                res.status(200).send('DOCUMENT DELETED successfully!' + deleteddocument);
+            }
+            else {
+                res.status(404).send('INVALID EMP ID ' + req.params.eid);
+            }
+        }) //CLOSE THEN
+        .catch(err => {
+            return res.status(500).send({ message: "DB Problem..Error in Delete with id " + req.params.eid });
+        })//CLOSE CATCH
+}//CLOSE CALLBACK FUNCTION BODY
+); //CLOSE Delete METHOD
+
+
 module.exports = router;
