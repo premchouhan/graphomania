@@ -23,17 +23,17 @@ function Viewall() {
         return bloglist.map((currentrow, index) => {
             return (
                 <div align="center" >
-                <table border="6" >
-                <tr key={index}>
-                  <div> CATEGORY   - {currentrow.category}</div>
-                  <div>TITLE   - {currentrow.title}</div>
-                  <div> NAME   - {currentrow.name}</div>
-                  <div>BLOG    - {currentrow.blog}</div>
-                  <div> EMAIL - {currentrow.email}</div>
-                  <div> CreatedAt - {currentrow.createdAt}</div>
+                    <table border="6" >
+                        <tr key={index}>
+                            <div> CATEGORY   - {currentrow.category}</div>
+                            <div>TITLE   - {currentrow.title}</div>
+                            <div> NAME   - {currentrow.name}</div>
+                            <div>BLOG    - {currentrow.blog}</div>
+                            <div> EMAIL - {currentrow.email}</div>
+                            <div> CreatedAt - {currentrow.createdAt}</div>
 
-                </tr>
-                </table>
+                        </tr>
+                    </table>
                 </div>
             );
         });
@@ -45,12 +45,12 @@ function Viewall() {
 
             <h3>PUBLIC POST</h3>
 
-                <tbody>
-                    {viewBlogview()}
-                </tbody>
-           
+            <tbody>
+                {viewBlogview()}
+            </tbody>
+
         </div>
-        )
+    )
 }
 
 //STEP 3 -- EXPORT IT TO USE IT
