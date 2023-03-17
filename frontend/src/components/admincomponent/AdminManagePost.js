@@ -33,8 +33,9 @@ function AdminManagePost() {
                             <div> CreatedAt - {currentrow.createdAt}</div>
 
                         </tr>
-                         <button onClick={() => removeRow(index)}>Delete</button>
+                         
                     </table>
+                    <button onClick={() => removeRow(index)}>Delete</button>
                 </div>
             );
         });
