@@ -8,7 +8,16 @@ function Userafterlogin() {
     return (
         <div>
             <Navbar />
-            <h1> THIS IS USER AFTER LOGIN COMPONENT OK</h1>
+            <>
+      {/* <Navbar /> */}
+    
+      <div className="header">
+        <div className="headerTitles">
+          <span className="headerTitleSm">Your Story Your Words</span>
+          <span className="headerTitleLg">🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</span>
+        </div>
+      </div>
+    </>
         </div>
     )
 }

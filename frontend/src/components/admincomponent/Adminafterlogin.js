@@ -16,8 +16,16 @@ function Adminafterlogin() {
         return (
             <div>
                 <Navbar />
-                <h3>WELCOME ADMIN</h3>
-                <h1> THIS IS ADMIN AFTER LOGIN COMPONENT</h1>
+                <>
+      {/* <Navbar /> */}
+      
+      <div className="header">
+        <div className="headerTitles">
+          <span className="headerTitleSm">Your Story Your Words</span>
+          <span className="headerTitleLg">🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</span>
+        </div>
+      </div>
+    </>
             </div>
         )
     }

@@ -129,7 +129,8 @@ export default function Write() {
               <br></br>
               <th>
               </th>
-              <th value="UPDATED" colSpan='2' className="buttonContainer"><input type="submit" /></th></tr>
+              <th value="UPDATED" colSpan='2' className="buttonContainer"><input type="submit" /></th>
+              </tr>
           </table>
         </form>
       </div>
