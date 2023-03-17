@@ -5,6 +5,11 @@ import axios from "axios";
 import Navbar from '../../components/nav/Navbar'
 
 export default function Write() {
+  const [bloglist, setBlogview] = useState([]);
+  const [msg, setMessage] = useState("");
+  var tempbloglist = [...bloglist]; // make a new copy of array instead of mutating the same array directly. 
+  
+
   const [ecategory, setCategory] = useState('');
   const [eemail, setEmail] = useState('');
   const [ename, setName] = useState('');
@@ -25,12 +30,17 @@ export default function Write() {
     }
 
     axios.post('http://localhost:5000/blogs/write', blogobj)
-      .then(res => {
-        console.log(res.data)
+    .then(res => {
+      console.log(res.data)
+      setMessage('SUCCESSFULLY POSTED')
+      setBlogview(tempbloglist)
         sessionStorage.setItem("write", JSON.stringify(res.data))
         
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+        setMessage('PROBLEM....')
+    })
     setCategory('');
     setTitle('');
     setName('');
@@ -43,7 +53,7 @@ export default function Write() {
     <>
       <Navbar />
 
-
+    <b style={{ color: "green" }}>{msg}</b>
       <div className="write">
         <img width={800}
           className="writeImg"

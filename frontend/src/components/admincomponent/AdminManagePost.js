@@ -22,8 +22,8 @@ function AdminManagePost() {
     function viewBlogview() {
         return bloglist.map((currentrow, index) => {
             return (
-                <div align="center" >
-                    <table border="6" >
+                <div align="center"  >
+                    <table border="4" >
                         <tr key={index}>
                             <div> CATEGORY   - {currentrow.category}</div>
                             <div>TITLE   - {currentrow.title}</div>
@@ -35,15 +35,18 @@ function AdminManagePost() {
                         </tr>
                          
                     </table>
-                    <button onClick={() => removeRow(index)}>Delete</button>
+                    
+                <button onClick={() => removeRow(index)}>Delete</button>
+        
                 </div>
+                
             );
         });
     }
  function removeRow(index) {
         var tempbloglist = [...bloglist]; // make a new copy of array instead of mutating the same array directly. 
         let removerow = tempbloglist.splice(index, 1);
-        console.log(removerow[0].empemail)
+        console.log(removerow[0].email)
 
         axios.delete('http://localhost:5000/blogs/delpost/' + removerow[0].email)
             .then(res => {
@@ -62,7 +65,7 @@ function AdminManagePost() {
             <Navbar />
 
             <h3>PUBLIC POST</h3>
-
+            <b style={{ color: "red" }}>{msg}</b>
             <tbody>
                 {viewBlogview()}
             </tbody>
