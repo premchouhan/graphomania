@@ -24,8 +24,9 @@ function Userafterlogin() {
             alt="WRITER"
           />
           <Carousel.Caption>
-            <h1>TRAVEL</h1>
-            <p>“Remember that happiness is a way of travel, not a destination.”</p>
+          <h5>Publish your passions, your way</h5>
+          <h5>“Create a unique and beautiful blog easily.”.</h5>
+         
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -34,9 +35,13 @@ function Userafterlogin() {
             src="https://wallpapercave.com/w/wp1843770.jpg"
             alt="MUSIC"
           />
+
           <Carousel.Caption>
-            <h1>MUSIC</h1>
-            <p>“Music is the language of the spirit. It opens the secret of life bringing peace, abolishing strife.”.</p>
+            <h1>Know your audience</h1>
+            
+            <p> “Find out which posts are a hit with Blogger’s built-in analytics. 
+            You’ll see where your audience is coming from and what they’re interested in.
+             You can even connect your blog directly to Google Analytics for a more detailed look.”</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -47,9 +52,9 @@ function Userafterlogin() {
             />
           
           <Carousel.Caption>
-            <h1>NATURE</h1>
+            <h1>Hang onto your memories</h1>
             <p>
-            “Food for us comes from our relatives, whether they have wings or fins or roots. That is how we consider food. Food has a culture. It has a history. It has a story. It has relationships.”
+            “Save the moments that matter. Blogger lets you safely store thousands of posts, photos, and more with Google.”
             </p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -62,8 +67,9 @@ function Userafterlogin() {
   
           
           <Carousel.Caption>
-            <h1>CINEMA</h1>
-            <p>“Rest is not idleness, and to lie sometimes on the grass under trees on a summer's day, listening to the murmur of the water, or watching the clouds float across the sky, is by no means a waste of time.”</p>
+            <h1>Join millions of others</h1>
+            <p>“ Whether sharing your expertise, breaking news, or whatever’s on your mind, you’re in good company on Blogger.
+               Sign up to discover why millions of people have published their passions here.”</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -73,8 +79,8 @@ function Userafterlogin() {
             alt="CINEMA"
           />
           <Carousel.Caption>
-            <h1>WRITER</h1>
-            <p>"Cinema is an art form, a result of dedication of a number of people."</p>
+          <h1>Create a beautiful blog that fits your style.</h1>
+            <p>“Remember that happiness is a way of travel, not a destination.”</p>
       
           </Carousel.Caption>
       
