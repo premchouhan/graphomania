@@ -36,6 +36,10 @@ function Adminlogin() {
     return (
         <div className="alogin">
             <Navbar />
+        {/* <div>
+          <span className="headerTitleLg">🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</span>
+       
+      </div> */}
             <h3 className="aloginTitle">ADMIN LOGIN</h3>
             <h4 >{msg}</h4>
 

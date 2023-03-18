@@ -50,6 +50,11 @@ function Adminsearchuser() {
         return (
             <>
                 <Navbar />
+                <h4 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h4>
+
+                {/* <div>
+                <img height="45" src="https://app.logo.com/view/logo_cf0cdc72-b45e-4f8b-999f-37706a9171cc" />
+      </div> */}
                 <br />
                 <h3 style={{ color: 'brown' }}>ENTER EMAIL ID FOR SEARCH</h3>
                 <b style={{ color: "red" }}>{msg}</b>
@@ -68,6 +73,8 @@ function Adminsearchuser() {
         return (
             <>
                 <Navbar />
+                <h1 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h1>
+
                 <br />
                 <h3 style={{ color: 'brown' }}>ENTER EMAIL ID FOR SEARCH</h3>
                 <b style={{ color: "red" }}>{msg}</b>

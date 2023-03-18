@@ -39,8 +39,10 @@ function Adminviewall() {
 
     return (
         <div align="center">
-            <Navbar />
+                          
 
+            <Navbar />
+            <h5 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h5>
             <h3>ALL EMPLOYEE DETAILS</h3>
 
             <table border="1">

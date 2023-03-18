@@ -48,8 +48,15 @@ function Login() {
 
     return (
         <div className="login">
-            <Navbar />
-            <h3 className="loginTitle" >LOGIN</h3>
+
+               <br></br> 
+            
+          <h3 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h3> 
+          
+          <br></br>
+      <Navbar />
+      <h2>LOGIN</h2>
+            {/* <h3 className="loginTitle" >LOGIN</h3> */}
             <h4 >{msg}</h4>
 
             <form className="loginForm" onSubmit={executeSubmit}>

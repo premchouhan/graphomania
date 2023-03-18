@@ -22,7 +22,9 @@ function AdminManagePost() {
     function viewBlogview() {
         return bloglist.map((currentrow, index) => {
             return (
+                
                 <div align="center"  >
+                    
                     <table border="4" >
                         <tr key={index}>
                             <div> CATEGORY   - {currentrow.category}</div>
@@ -63,6 +65,8 @@ function AdminManagePost() {
     return (
         <div align="center">
             <Navbar />
+
+                           <h3 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h3>
 
             <h3>PUBLIC POST</h3>
             <b style={{ color: "red" }}>{msg}</b>

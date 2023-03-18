@@ -42,9 +42,13 @@ function Viewall() {
     return (
         <div align="center">
             <Navbar />
-
+            <h4 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h4>
             <h3>PUBLIC POST</h3>
 
+            <span className="headerTitleSm">Your Story Your Words</span>
+            <br />
+            <br></br>
+            
             <tbody>
                 {viewBlogview()}
             </tbody>

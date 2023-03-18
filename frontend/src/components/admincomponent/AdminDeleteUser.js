@@ -30,6 +30,8 @@ function AdminDeleteUser() {
     return (
         <>
             <Navbar />
+            <h4>🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h4>
+
             <br />
             <h3 style={{ color: 'brown' }}>ENTER EMAIL ID FOR DELETE</h3>
             <b style={{ color: "red" }}>{msg}</b>

@@ -52,6 +52,7 @@ export default function Write() {
   return (
     <>
       <Navbar />
+      <h4 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h4>
 
     <b style={{ color: "green" }}>{msg}</b>
       <div className="write">

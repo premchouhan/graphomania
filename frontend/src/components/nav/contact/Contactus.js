@@ -44,7 +44,17 @@ function Contactus() {
 
     return (
         <div>
-             <Navbar/>        
+           <br></br>
+            
+            <h3 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h3> 
+            
+            <br></br>
+        <Navbar />
+        <h4>CONTACT US</h4>
+             
+             {/* <div>
+                <img height="45" url="../" />
+      </div> */}
 <div className="size">
 
   <div class="container">

@@ -8,10 +8,15 @@
   background-size: cover;
   opacity: 50;
 }
-
-.loginTitle {
-  font-size: 40px;
+h2{
+  color: rgb(8, 120, 23);
+  font-weight: bold;
+  font-style:oblique;
 }
+
+/* .loginTitle {
+  font-size: 40px;
+} */
 
 .loginForm {
   margin-top: 20px;

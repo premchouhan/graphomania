@@ -54,9 +54,13 @@ function Reg() {
     }
     return (
         <div className="register">
-            <Navbar />
-            <br />
-            <h3><span className="registerTitle">REGISTRATION</span></h3>
+            <br></br> <br></br>
+            
+          <h3 >🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</h3> 
+          
+          <br></br>
+      <Navbar />
+      <h3>REGISTRATION</h3>
             <h4 style={{ color: "brown" }}> {msg}</h4>
             <form onSubmit={handleSubmit}>
                 <input className="registerInput" type="text" value={ename}
@@ -81,18 +85,18 @@ function Reg() {
                 <input className="registerInput" type="password" value={epass}
                     onChange={(e) => setEmpPass(e.target.value)} placeholder="Enter Password"
                     required />
-                <br /><br />
-
+                <br />
+                
                 <input type="radio" name="gender" value="MALE"
                     checked={egender === 'MALE'}
                     onChange={(e) => setEmpGender(e.target.value)} />
                 <label>Male </label>
-
+                {" "}
                 <input type="radio" name="gender" value="FEMALE"
                     checked={egender === 'FEMALE'}
                     onChange={(e) => setEmpGender(e.target.value)} />
                 <label> Female</label>
-                <br /><br />
+                <br />
 
                 <select className="registerInput" value={ecountry} onChange={(e) => setEmpCountry(e.target.value)}>
                     
@@ -101,8 +105,8 @@ function Reg() {
                     <option value="UK">UK</option>
                     <option value="USA">USA</option>
                 </select>
-                <br /><br />
-
+                <br />
+                <br></br>
                 <label>ADDRESS: </label> <br />
                 <textarea className="registerInput" value={eaddress}
                     onChange={(e) => setEmpAddress(e.target.value)} rows="3" >

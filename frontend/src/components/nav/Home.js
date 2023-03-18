@@ -8,7 +8,9 @@ function Home() {
     return (
         <div>
             <Navbar />
-            <h1> THIS IS Home COMPONENT</h1>
+            <div>
+          <span className="headerTitleLg">🅶🆁🅰🅿🅷🅾🅼🅰🅽🅸🅰</span>
+      </div>
         </div>
     )
 }

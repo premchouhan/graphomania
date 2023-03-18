@@ -9,12 +9,23 @@
       rgba(255, 255, 255, 0.5)
     ),
     url("https://images.pexels.com/photos/317355/pexels-photo-317355.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  background-size: cover;
-}
 
-.registerTitle {
-  font-size: 50px;
+  background-size: cover;
+
 }
+h5{
+  color: rgb(109, 8, 120);
+  font-weight: bold;
+  font-style:oblique;
+}
+h3{
+  color: rgb(8, 98, 120);
+  font-weight: bold;
+  font-style:oblique;
+}
+/* .registerTitle {
+  font-size: 50px;
+} */
 
 
 .registerInput {
