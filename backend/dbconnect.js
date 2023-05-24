@@ -4,11 +4,11 @@ mongoose.set('strictQuery', false);
 
 // Database Connection URL
 //Mongoose is an Object Document Mapper (ODM)
-const url = 'mongodb://localhost:27017/AEC';
+const url = 'YOUR LOCAL HOST URL';
 
 // STEP-2 : ESTABLISH CONNECTION WITH MONGODB DATABASE THROUGH MONGOOSE
 // err is callback function Parameter. ARROW OPERATOR.
-// JSON.stringify convert Object to String. 2 means Indentation of Two space Character 
+// JSON.stringify convert Object to String. 2 means Indentation of Two space Character
 mongoose.connect(url)
   .then(() => {
     console.log('NODEJS TO MongoDB Connection ESTABLISH.....');
